@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide show</title>
+  </head>
+  <script src="script.js" defer></script>
+  <style>
+    #imageContainer {
+      height: 60dvh;
+      width: 95%;
+      padding: 1rem;
+      border: 1px solid red;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+    }
+    #btnContainer {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    #btnContainer button {
+      height: 2rem;
+      width: 10rem;
+      border-radius: 1rem;
+      background-color: #333;
+      color: white;
+    }
+  </style>
+  <body>
+    <div id="imageContainer">
+      <img id="image" src="" />
+    </div>
+    <div id="btnContainer">
+      <button id="prev">Previous</button>
+      <button id="next">Next</button>
+    </div>
+  </body>
+</html>

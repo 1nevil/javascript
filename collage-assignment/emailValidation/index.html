@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>random number genrator</title>
+  </head>
+
+  <body>
+    <center>
+      <form>
+        <div>
+          <label for="email"></label>
+          <input type="text" id="emailtxt" />
+          <input type="submit" id="submit" />
+        </div>
+      </form>
+    </center>
+    <script>
+      const btn = document.querySelector("#submit")
+
+      btn.addEventListener("click", () => {
+        let email = document.querySelector("#emailtxt").value
+        const emailPatt = "[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+
+        if (email.match(emailPatt)) {
+          alert(`${email} is valid email`)
+        } else {
+          alert(`${email} is invalid email`)
+        }
+      })
+    </script>
+  </body>
+</html>

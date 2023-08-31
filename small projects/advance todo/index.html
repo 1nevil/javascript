@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📝advance todo</title>
+    <script defer src="script.js"></script>
+    <style>
+      span:hover {
+        text-decoration: line-through red 2px;
+      }
+      button {
+        background-color: #333;
+        color: white;
+        border-radius: 1rem;
+        height: 2rem;
+        width: 5rem;
+      }
+
+      input#todo-input {
+        border: 1px solid;
+        height: 2rem;
+        width: 20rem;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="list"></ul>
+    <form id="new-todo-form">
+      <label for="todo-input">
+        <input type="text" id="todo-input" />
+      </label>
+      <button type="submit">Add ToDo</button>
+    </form>
+    <template>
+      <li class="list-item">
+        <label class="list-ltem-label">
+          <input type="checkbox" data-list-item-checkbox />
+          <span data-list-item-text> </span>
+        </label>
+        <button data-button-delete>🗑️</button>
+      </li>
+    </template>
+  </body>
+</html>

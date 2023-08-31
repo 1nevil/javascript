@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        height: 100px;
+        width: 100px;
+      }
+
+      #model.hide {
+        display: none;
+      }
+
+      #model {
+        background-color: #b9b3b3;
+        color: white;
+        display: block;
+        position: absolute;
+        height: 50dvh;
+        width: 50dvw;
+        top: 25%;
+        left: 25%;
+        transform: translateX(50%, 50%);
+      }
+      #model img {
+        display: block;
+        margin: 1rem;
+        height: 16rem;
+        width: 90%;
+      }
+
+      #model button {
+        margin-left: 12px;
+      }
+    </style>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <img src="imgs/wallpaper.png" id="wallpaper" />
+    <img src="imgs/bulding.jpg" id="building" />
+    <img src="imgs/mountain.jpg" id="mountain" />
+    <div id="model" class="hide">
+      <img id="modelImage" />
+      <center>
+        <button id="closeModel">Close</button>
+      </center>
+    </div>
+  </body>
+</html>

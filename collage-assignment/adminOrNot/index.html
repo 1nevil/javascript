@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input,
+      button {
+        display: block;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <form>
+        Enter number email :<input type="emailTxt" id="emailTxt" /> Enter
+        Password :<input type="password" id="passwordTxt" />
+
+        <input type="submit" id="loginBtn" />
+      </form>
+    </center>
+
+    <script>
+      const emailTxt = document.querySelector("#emailTxt")
+      const passwordTxt = document.querySelector("#passwordTxt")
+      const loginBtn = document.querySelector("#loginBtn")
+
+      loginBtn.addEventListener("click", () => {
+        const email = emailTxt.value
+        const password = passwordTxt.value
+
+        if (email === "admin@gmail.com" && password === "password") {
+          alert("login successfully")
+        } else {
+          alert("login unsuccess")
+        }
+      })
+    </script>
+  </body>
+</html>

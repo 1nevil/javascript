@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <section class="form">
+      <input
+        type="text"
+        name="txtAmount"
+        id="txtAmount"
+        placeholder="Enter your total bill"
+      />
+      <p id="errorMsg"></p>
+      <input
+        type="text"
+        name="txtTip"
+        id="txtTip"
+        placeholder="Enter your total tip in %"
+      />
+      <div>
+        <button id="btnAdd">+</button>
+        <h4 id="person">1</h4>
+        <button id="btnMin">-</button>
+      </div>
+      <div>
+        <h6 id="bill"></h6>
+
+        <h6 id="perPerson"></h6>
+      </div>
+    </section>
+  </body>
+</html>

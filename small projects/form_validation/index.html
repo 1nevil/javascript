@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        text-transform: capitalize;
+      }
+
+      .errors {
+        display: none;
+      }
+
+      .errors.show {
+        display: block;
+      }
+      p {
+        margin: 0 0 1rem 0;
+      }
+
+      section {
+        margin: 1rem;
+      }
+
+      input[type="submit"] {
+        padding: 0.2rem;
+        background-color: #333;
+        color: whitesmoke;
+        border-radius: 1rem;
+        width: 100%;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+      }
+
+      form {
+        width: 20rem;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <center><h1>Form</h1></center>
+    <form action="thankyou.html" id="form">
+      <section class="errors">
+        <h3 class="error-title">Error</h3>
+        <ul class="error-list"></ul>
+      </section>
+
+      <section>
+        <label for="txt-user">
+          <p>username</p>
+          <input
+            type="text"
+            id="txt-user"
+            placeholder="Enter your user name"
+            name="txt-user"
+          />
+        </label>
+      </section>
+
+      <section>
+        <label for="txt-pass">
+          <p>password</p>
+          <input
+            type="password"
+            id="txt-pass"
+            placeholder="Enter your password"
+            name="txt-pass"
+          />
+        </label>
+      </section>
+
+      <section>
+        <label for="txt-confirm-pass">
+          <p>password confirmation</p>
+          <input
+            type="password"
+            id="txt-confirm-pass"
+            placeholder="Enter your confirmation password"
+            name="txt-confirm-pass"
+          />
+        </label>
+      </section>
+      <section>
+        <label for="checkbox-agree">
+          <input type="checkbox" id="checkbox-agree" />
+          <span>Agree to term ?</span>
+        </label>
+      </section>
+
+      <section>
+        <input type="submit" value="sign up" id="submitButton" />
+      </section>
+    </form>
+  </body>
+</html>

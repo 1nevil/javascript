@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      select {
+        width: 10rem;
+        height: 2.5rem;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        background-color: #414040;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <select>
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="green">green</option>
+      </select>
+    </center>
+
+    <script>
+      const dropDown = document.querySelector("select")
+      const body = document.querySelector("body")
+
+      dropDown.addEventListener("change", () => {
+        body.style.backgroundColor = dropDown.value
+      })
+    </script>
+  </body>
+</html>

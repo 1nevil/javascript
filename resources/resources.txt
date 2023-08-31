@@ -1,0 +1,9 @@
+When use which loop
+
+https://medium.com/@jeff_long/understanding-foreach-map-filter-and-find-in-javascript-f91da93b9f2c
+
+useCase of reduce method
+https://betterprogramming.pub/6-use-cases-for-reduce-in-javascript-49683842ebed
+
+Real world useCAse of the methods in js 
+https://medium.com/@onurinanc

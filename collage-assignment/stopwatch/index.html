@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <div>
+        <span id="hr"></span>:<span id="min"></span>:<span id="sec"></span>
+      </div>
+      <div>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+      </div>
+    </center>
+    <script>
+      const hourSpan = document.querySelector("#hr")
+      const minuteSpan = document.querySelector("#min")
+      const secondSpan = document.querySelector("#sec")
+      const startBtn = document.querySelector("#start")
+      const stopBtn = document.querySelector("#stop")
+      const resetBtn = document.querySelector("#reset")
+      let interval
+
+      let second = 0
+      let minute = 0
+      let hr = 0
+
+      resetValue()
+      function resetValue() {
+        hourSpan.innerHTML = hr
+        minuteSpan.innerHTML = minute
+        secondSpan.innerHTML = second
+      }
+
+      function Interval(intervalTime) {
+        interval = setInterval(() => {
+          second++
+
+          secondSpan.innerHTML = second
+          if (second >= 60) {
+            second = 1
+            minute++
+            minuteSpan.innerHTML = minute
+          }
+
+          if (minute >= 60) {
+            minute = 0
+            hr++
+            hourSpan.innerHTML = hr
+          }
+        }, intervalTime)
+      }
+
+      startBtn.addEventListener("click", () => {
+        Interval(1000)
+      })
+
+      stopBtn.addEventListener("click", () => {
+        clearInterval(interval)
+      })
+
+      resetBtn.addEventListener("click", () => {
+        second = 0
+        minute = 0
+        hr = 0
+
+        resetValue()
+      })
+
+      Interval
+    </script>
+  </body>
+</html>

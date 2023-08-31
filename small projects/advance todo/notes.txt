@@ -1,0 +1,2 @@
+<template>
+In HTML, templates refer to a markup structure that can be defined and stored within the HTML document, but is not rendered by the browser when the page loads. HTML templates provide a way to define reusable content that can be dynamically populated and inserted into the document using JavaScript.

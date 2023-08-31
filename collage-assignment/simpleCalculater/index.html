@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input,
+      button {
+        display: block;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      Enter number 1 :<input type="text" id="numberTxt1" /> Enter number 2
+      :<input type="text" id="numberTxt2" />
+
+      <button id="addition">Addition</button>
+      <button id="subtraction">subtraction</button>
+      <button id="multiplication">multiplication</button>
+      <button id="division">division</button>
+    </center>
+
+    <script>
+      const firstInput = document.querySelector("#numberTxt1")
+      const secondInput = document.querySelector("#numberTxt2")
+      const additionBtn = document.querySelector("#addition")
+      const subtractionBtn = document.querySelector("#subtraction")
+      const multiplicationBtn = document.querySelector("#multiplication")
+      const divisionBtn = document.querySelector("#division")
+      let number1
+      let number2
+
+      function textToNumber() {
+        number1 = Number(firstInput.value)
+        number2 = Number(secondInput.value)
+      }
+
+      additionBtn.addEventListener("click", () => {
+        textToNumber()
+        alert(number1 + number2)
+      })
+      subtractionBtn.addEventListener("click", () => {
+        textToNumber()
+        alert(number1 - number2)
+      })
+      multiplicationBtn.addEventListener("click", () => {
+        textToNumber()
+        alert(number1 * number2)
+      })
+      divisionBtn.addEventListener("click", () => {
+        textToNumber()
+        alert(number1 / number2)
+      })
+    </script>
+  </body>
+</html>

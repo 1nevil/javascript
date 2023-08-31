@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+  </head>
+  <body>
+    <script>
+      // why  promis => its resolve the complex callback function more easily
+
+      /*const promiseObj = new Promise((resolve, reject) => {
+        val = false;
+        if (val) {
+          resolve("request complted");
+        } else {
+          reject("request not complted");
+        }
+      }).then(
+        (value) => {
+          console.log(value);
+        },
+        (err) => {
+          console.log("error " + err);
+        }
+      );*/
+
+      const request = (n) => {
+        const promiseObj = new Promise((resolve, reject) => {
+          if (n <= 5) {
+            resolve("n is greater than 5 - resolved");
+          } else {
+            reject("hello");
+          }
+        })
+          .then((res) => {
+            console.log(res);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      };
+
+      request(10);
+      //request(2);
+    </script>
+  </body>
+</html>
+<!-- <script>const promisObj = new Promise((complete /*resolve*/, reject) => {
+        /* this is producing part of the program. all logic written inside this In API producing
+         code is always wriiten we only need to cosume the code.*/
+        // if no error found then it execute then block
+        // if any error found then its execute catch block
+        // Finally block is allways executed
+        n = 10;
+        complete(n);
+      })
+        .then((value) => {
+          console.log("then block");
+          console.log(value);
+          return value + 10;
+        })
+        .then((value) => {
+          console.log("then block");
+          console.log(value);
+          return value + 10;
+        })
+        .catch((err) => {
+          console.log("error block");
+          console.log(err);
+        })
+        .finally(() => {
+          console.log("Finally Done");
+        });</script> -->

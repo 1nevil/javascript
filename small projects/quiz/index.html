@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <script defer src="script.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      #alert {
+        width: 17rem;
+        height: 8rem;
+        background-color: rgb(160, 245, 160);
+        display: none;
+        border-radius: 3rem;
+        border: 3px solid green;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #alert.show {
+        display: block;
+      }
+      /* #alert > .alert-item {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            } */
+      #alert > .alert-item > h4 {
+        font-size: 20px;
+        color: rgb(12, 100, 0);
+        text-align: center;
+        margin-top: 2.4rem;
+      }
+      #alert .alert-item h5 {
+        font-size: 17px;
+        color: rgb(12, 100, 0);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="alert">
+      <div class="alert-item">
+        <h4>congratulations 🎉🎊🍾🍾</h4>
+        <h5>you got them all right!!</h5>
+      </div>
+    </div>
+    <form id="quiz-form">
+      <h1>
+        <center>Answer The following question</center>
+      </h1>
+      <ol>
+        <li class="question-item">
+          what does this code return? (0 || '' || undefined || "hi" )
+          <ol type="A" class="order-list">
+            <li>
+              <input type="radio" name="q1" value="0" placeholder="0" /> 0
+            </li>
+            <li>
+              <input type="radio" name="q1" value="''" placeholder="''" /> " "
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="q1"
+                value="undefined"
+                placeholder="undefined"
+              />
+              undefined
+            </li>
+            <li>
+              <input type="radio" name="q1" value="hi" placeholder="hi" /> hi
+            </li>
+          </ol>
+        </li>
+        <li class="question-item">
+          what is call when function call itself?
+          <ol type="A" class="order-list">
+            <li>
+              <input type="radio" name="q2" value="inception" placeholder="0" />
+              inception
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="q2"
+                value="recursion"
+                placeholder="''"
+              />
+              recursion
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="q2"
+                value="incaptulation"
+                placeholder="undefined"
+              />
+              incaptulation
+            </li>
+            <li>
+              <input type="radio" name="q2" value="who care" placeholder="hi" />
+              who care
+            </li>
+          </ol>
+        </li>
+        <li class="question-item">
+          How to access the value of the data-count data attribute in
+          javascript?
+          <ol type="A" class="order-list">
+            <li>
+              <input
+                type="radio"
+                name="q3"
+                value="element.dataset.count"
+                placeholder="0"
+              />
+              element.dataset.count
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="q3"
+                value="element.dataAttribute.count"
+                placeholder="''"
+              />
+              element.dataAttribute.count
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="q3"
+                value="element.dataset.datcount"
+                placeholder="undefined"
+              />
+              element.dataset.datcount
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="q3"
+                value="element.datacount"
+                placeholder="hi"
+              />
+              element.datacount
+            </li>
+          </ol>
+        </li>
+      </ol>
+      <input type="submit" id="btnSubmit" value="check" />
+    </form>
+  </body>
+</html>

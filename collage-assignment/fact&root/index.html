@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <input type="text" id="numberTxt" />
+      <button id="sqrBtn">Square</button>
+      <button id="factBtn">Factorial</button>
+    </center>
+    <script>
+      const squareRootBtn = document.querySelector("#sqrBtn")
+      const factorialBtn = document.querySelector("#factBtn")
+      const numberTxt = document.querySelector("#numberTxt")
+
+      squareRootBtn.addEventListener("click", () => {
+        let number = Number(numberTxt.value)
+        alert(number * number)
+      })
+
+      factorialBtn.addEventListener("click", () => {
+        let number = Number(numberTxt.value)
+        let ans = 1
+        for (let index = 1; index <= number; index++) {
+          ans *= index
+        }
+        alert(ans)
+      })
+    </script>
+  </body>
+</html>

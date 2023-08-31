@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span id="timerSpan"></span>
+    <script>
+      let timerValue = 10
+      const timerSpan = document.querySelector("#timerSpan")
+      let timer
+      setToSpan()
+
+      function setToSpan() {
+        timerSpan.innerHTML = timerValue
+      }
+
+      timer = setInterval(() => {
+        timerValue--
+        setToSpan()
+        if (timerValue === 0) {
+          alert("time is up")
+          clearInterval(timer)
+          timerValue = 10
+        }
+      }, 1000)
+    </script>
+  </body>
+</html>
